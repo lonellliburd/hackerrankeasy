@@ -1,3 +1,3 @@
-# hackerrankeasy
+# hackerrankeasy/Codility
 
-Collection of Hacker Rank Easy (or Medium but felt easy) problems.
+Collection of Hacker Rank/Codility Easy (or Medium but felt easy) problems.
