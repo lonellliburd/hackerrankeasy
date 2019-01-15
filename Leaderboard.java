@@ -29,9 +29,8 @@ public class Leaderboard {
                 while ( lo <= hi) {
                     mid = (lo + hi) / 2;
                     if (positions[mid] == alice[i]){
-                        res[index] = mid + 1;
+                        res[index++] = mid + 1;
                         hi = mid;
-                        index++;
                         found = true;
                         break;
                     }
@@ -44,15 +43,14 @@ public class Leaderboard {
                 }
                 if (!found) {
                     if (alice[i] < positions[mid]){
-                        res[index] = (mid + 1) + 1;
+                        res[index++] = (mid + 1) + 1;
                         positions[mid+1] = alice[i];
                         hi = mid + 1;
                     } else {
-                        res[index] = (mid) + 1;
+                        res[index++] = (mid) + 1;
                         positions[mid] = alice[i];
                         hi = mid;
                     }
-                    index++;
                 }
             }
         }
