@@ -1,17 +1,12 @@
 static int[] rotLeft(int[] a, int d) {
-        int last = a.length-1;
-        int [] temp = new int[d];
+        int [] res = new int[a.length];
 
-        for(int i=0; i<d; i++){
-            temp[i] = a[i];
+        int i = 0;
+        while (i < a.length){
+            res[i] = a[d];
+            i++;
+            d = (d + 1) % a.length; 
         }
 
-        for(int k=d; k<=last; k++){
-            a[k-d] = a[k];
-        }
-
-        for(int j=a.length-d, i=0; j<a.length; j++, i++){
-            a[j] = temp[i];
-        }
-        return a;
+        return res;
     }
